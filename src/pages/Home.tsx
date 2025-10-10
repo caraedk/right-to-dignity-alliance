@@ -2,10 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Shield, Users, Scale } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const Home = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-primary text-primary-foreground py-20 md:py-32">
         <div className="container mx-auto px-4">
@@ -60,10 +58,7 @@ const Home = () => {
                 <Shield className="text-primary-foreground" size={24} />
               </div>
               <h3 className="text-xl font-bold mb-3">Legal Advocacy</h3>
-              <p className="text-muted-foreground">
-                Working with EU lawmakers to establish a legally binding right to
-                dignity that protects individuals from nonconsensual deepfakes.
-              </p>
+              <p className="text-muted-foreground">Working with EU policymakers to establish a legally binding right to dignity that protects individuals from nonconsensual deepfakes.</p>
             </Card>
 
             <Card className="p-6 bg-card hover:shadow-lg transition-shadow">
@@ -106,8 +101,6 @@ const Home = () => {
           </Button>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Home;
