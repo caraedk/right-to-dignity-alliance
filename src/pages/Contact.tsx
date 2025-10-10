@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, MapPin, Twitter, Linkedin } from "lucide-react";
+import { Mail, Instagram, Facebook, Linkedin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useState, FormEvent } from "react";
 const Contact = () => {
@@ -102,8 +102,8 @@ const Contact = () => {
                   <Mail className="text-accent mt-1" size={24} />
                   <div>
                     <h3 className="font-bold mb-2">Email</h3>
-                    <a href="mailto:info@righttodignity.eu" className="text-muted-foreground hover:text-accent transition-colors">
-                      info@righttodignity.eu
+                    <a href="mailto:righttodignityalliance@gmail.com" className="text-muted-foreground hover:text-accent transition-colors">
+                      righttodignityalliance@gmail.com
                     </a>
                   </div>
                 </div>
@@ -114,11 +114,14 @@ const Contact = () => {
               <Card className="p-6 bg-accent">
                 <h3 className="font-bold mb-4 text-accent-foreground">Follow Us</h3>
                 <div className="flex gap-4">
-                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-primary rounded-lg text-primary-foreground hover:bg-primary/90 transition-colors" aria-label="Twitter">
-                    <Twitter size={24} />
+                  <a href="https://www.instagram.com/righttodignity" target="_blank" rel="noopener noreferrer" className="p-3 bg-primary rounded-lg text-primary-foreground hover:bg-primary/90 transition-colors" aria-label="Instagram">
+                    <Instagram size={24} />
                   </a>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-primary rounded-lg text-primary-foreground hover:bg-primary/90 transition-colors" aria-label="LinkedIn">
+                  <a href="https://www.linkedin.com/company/right-to-dignity-alliance" target="_blank" rel="noopener noreferrer" className="p-3 bg-primary rounded-lg text-primary-foreground hover:bg-primary/90 transition-colors" aria-label="LinkedIn">
                     <Linkedin size={24} />
+                  </a>
+                  <a href="https://www.facebook.com/righttodignityalliance" target="_blank" rel="noopener noreferrer" className="p-3 bg-primary rounded-lg text-primary-foreground hover:bg-primary/90 transition-colors" aria-label="Facebook">
+                    <Facebook size={24} />
                   </a>
                 </div>
               </Card>

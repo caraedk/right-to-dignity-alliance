@@ -1,4 +1,4 @@
-import { Twitter, Linkedin, Mail } from "lucide-react";
+import { Instagram, Facebook, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -27,16 +27,16 @@ const Footer = () => {
             <h4 className="font-bold mb-4">Connect With Us</h4>
             <div className="flex space-x-4">
               <a
-                href="https://twitter.com"
+                href="https://www.instagram.com/righttodignity"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-accent transition-colors"
-                aria-label="Twitter"
+                aria-label="Instagram"
               >
-                <Twitter size={24} />
+                <Instagram size={24} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/right-to-dignity-alliance"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-accent transition-colors"
@@ -45,7 +45,16 @@ const Footer = () => {
                 <Linkedin size={24} />
               </a>
               <a
-                href="mailto:info@righttodignity.eu"
+                href="https://www.facebook.com/righttodignityalliance"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook size={24} />
+              </a>
+              <a
+                href="mailto:righttodignityalliance@gmail.com"
                 className="hover:text-accent transition-colors"
                 aria-label="Email"
               >
