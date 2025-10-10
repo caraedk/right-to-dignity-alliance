@@ -1,59 +1,42 @@
 import { Card } from "@/components/ui/card";
 import { Users, Building2 } from "lucide-react";
-
-const teamMembers = [
-  {
-    name: "Cecilia Liu",
-    role: "Team Lead"
-  },
-  {
-    name: "Zinab Zinad",
-    role: "Policy Research Lead"
-  },
-  {
-    name: "Cara Doumbe Kingue",
-    role: "Partnerships & Outreach Lead"
-  },
-  {
-    name: "Ninive Aguilar",
-    role: "Communications Lead"
-  },
-  {
-    name: "Tina Wong",
-    role: "Operations Lead"
-  }
-];
-
-const partners = [
-  {
-    name: "European Digital Rights Initiative",
-    type: "Advocacy Organization"
-  },
-  {
-    name: "Tech Accountability Network",
-    type: "Platform Watchdog"
-  },
-  {
-    name: "Women's Digital Safety Coalition",
-    type: "Victim Support"
-  },
-  {
-    name: "Centre for AI Ethics",
-    type: "Research Institution"
-  },
-  {
-    name: "EU Privacy Rights Foundation",
-    type: "Legal Advocacy"
-  },
-  {
-    name: "Digital Identity Protection League",
-    type: "Civil Society Organization"
-  }
-];
-
+const teamMembers = [{
+  name: "Cecilia Liu",
+  role: "Team Lead"
+}, {
+  name: "Zinab Zinad",
+  role: "Policy Research Lead"
+}, {
+  name: "Cara Doumbe Kingue",
+  role: "Partnerships & Outreach Lead"
+}, {
+  name: "Ninive Aguilar",
+  role: "Communications Lead"
+}, {
+  name: "Tina Wong",
+  role: "Operations Lead"
+}];
+const partners = [{
+  name: "European Digital Rights Initiative",
+  type: "Advocacy Organization"
+}, {
+  name: "Tech Accountability Network",
+  type: "Platform Watchdog"
+}, {
+  name: "Women's Digital Safety Coalition",
+  type: "Victim Support"
+}, {
+  name: "Centre for AI Ethics",
+  type: "Research Institution"
+}, {
+  name: "EU Privacy Rights Foundation",
+  type: "Legal Advocacy"
+}, {
+  name: "Digital Identity Protection League",
+  type: "Civil Society Organization"
+}];
 const About = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="bg-primary text-primary-foreground py-16 md:py-24">
         <div className="container mx-auto px-4">
@@ -100,12 +83,10 @@ const About = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">Our Team</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
-              {teamMembers.map((member, index) => (
-                <Card key={index} className="p-6 bg-card">
+              {teamMembers.map((member, index) => <Card key={index} className="p-6 bg-card">
                   <h3 className="text-xl font-bold mb-2">{member.name}</h3>
                   <p className="text-accent font-medium">{member.role}</p>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </div>
@@ -119,17 +100,9 @@ const About = () => {
               <Building2 className="text-primary" size={32} />
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">Our Partners</h2>
             </div>
-            <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
-              We're proud to work alongside leading organizations across Europe who share
-              our commitment to protecting digital dignity and holding platforms accountable.
-            </p>
+            <p className="text-lg text-muted-foreground mb-8 max-w-3xl">(....)</p>
             <div className="grid md:grid-cols-3 gap-6">
-              {partners.map((partner, index) => (
-                <Card key={index} className="p-6 bg-card hover:shadow-lg transition-shadow">
-                  <h3 className="text-lg font-bold mb-2">{partner.name}</h3>
-                  <p className="text-sm text-accent font-medium">{partner.type}</p>
-                </Card>
-              ))}
+              {partners.map((partner, index) => {})}
             </div>
           </div>
         </div>
@@ -145,16 +118,11 @@ const About = () => {
             We're always looking to expand our network of partners committed to
             protecting digital dignity. Get in touch to explore collaboration opportunities.
           </p>
-          <a
-            href="/contact"
-            className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
-          >
+          <a href="/contact" className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
             Contact Us
           </a>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default About;
