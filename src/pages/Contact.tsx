@@ -6,19 +6,19 @@ import { Label } from "@/components/ui/label";
 import { Mail, MapPin, Twitter, Linkedin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useState, FormEvent } from "react";
-
 const Contact = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: ""
   });
-
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
       toast({
@@ -32,22 +32,24 @@ const Contact = () => {
     // In a real app, you would send this data to your backend
     toast({
       title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you soon.",
+      description: "Thank you for contacting us. We'll get back to you soon."
     });
 
     // Reset form
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: ""
+    });
   };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="bg-primary text-primary-foreground py-16 md:py-24">
         <div className="container mx-auto px-4">
@@ -69,54 +71,22 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <Label htmlFor="name">Name *</Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Your name"
-                    required
-                    className="mt-2"
-                  />
+                  <Input id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Your name" required className="mt-2" />
                 </div>
 
                 <div>
                   <Label htmlFor="email">Email *</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="your.email@example.com"
-                    required
-                    className="mt-2"
-                  />
+                  <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="your.email@example.com" required className="mt-2" />
                 </div>
 
                 <div>
                   <Label htmlFor="subject">Subject</Label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    placeholder="What is this regarding?"
-                    className="mt-2"
-                  />
+                  <Input id="subject" name="subject" value={formData.subject} onChange={handleChange} placeholder="What is this regarding?" className="mt-2" />
                 </div>
 
                 <div>
                   <Label htmlFor="message">Message *</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Tell us how we can help..."
-                    required
-                    className="mt-2 min-h-[150px]"
-                  />
+                  <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Tell us how we can help..." required className="mt-2 min-h-[150px]" />
                 </div>
 
                 <Button type="submit" size="lg" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
@@ -139,39 +109,15 @@ const Contact = () => {
                 </div>
               </Card>
 
-              <Card className="p-6">
-                <div className="flex items-start gap-4">
-                  <MapPin className="text-accent mt-1" size={24} />
-                  <div>
-                    <h3 className="font-bold mb-2">Address</h3>
-                    <p className="text-muted-foreground text-sm">
-                      Brussels Office<br />
-                      Rue de la Loi 155<br />
-                      1040 Brussels, Belgium
-                    </p>
-                  </div>
-                </div>
-              </Card>
+              
 
               <Card className="p-6 bg-accent">
                 <h3 className="font-bold mb-4 text-accent-foreground">Follow Us</h3>
                 <div className="flex gap-4">
-                  <a
-                    href="https://twitter.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-primary rounded-lg text-primary-foreground hover:bg-primary/90 transition-colors"
-                    aria-label="Twitter"
-                  >
+                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-primary rounded-lg text-primary-foreground hover:bg-primary/90 transition-colors" aria-label="Twitter">
                     <Twitter size={24} />
                   </a>
-                  <a
-                    href="https://linkedin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-primary rounded-lg text-primary-foreground hover:bg-primary/90 transition-colors"
-                    aria-label="LinkedIn"
-                  >
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-primary rounded-lg text-primary-foreground hover:bg-primary/90 transition-colors" aria-label="LinkedIn">
                     <Linkedin size={24} />
                   </a>
                 </div>
@@ -214,8 +160,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Contact;
