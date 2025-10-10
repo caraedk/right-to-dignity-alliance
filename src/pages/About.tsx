@@ -3,24 +3,24 @@ import { Users, Building2 } from "lucide-react";
 
 const teamMembers = [
   {
-    name: "Dr. Maria Schmidt",
-    role: "Founding Director",
-    bio: "Legal scholar specializing in digital rights and EU policy, with 15 years of experience in technology law."
+    name: "Cecilia Liu",
+    role: "Team Lead"
   },
   {
-    name: "Jean-Pierre Dubois",
-    role: "Policy Coordinator",
-    bio: "Former EU Parliament advisor with extensive experience in digital legislation and platform regulation."
+    name: "Zinab Zinad",
+    role: "Policy Research Lead"
   },
   {
-    name: "Sofia Andersson",
-    role: "Victim Advocacy Lead",
-    bio: "Human rights advocate dedicated to supporting victims of digital abuse and nonconsensual content."
+    name: "Cara Doumbe Kingue",
+    role: "Partnerships & Outreach Lead"
   },
   {
-    name: "Dr. Thomas Mueller",
-    role: "Research Director",
-    bio: "AI ethics researcher focusing on the societal impacts of deepfakes and synthetic media."
+    name: "Ninive Aguilar",
+    role: "Communications Lead"
+  },
+  {
+    name: "Tina Wong",
+    role: "Operations Lead"
   }
 ];
 
@@ -103,8 +103,7 @@ const About = () => {
               {teamMembers.map((member, index) => (
                 <Card key={index} className="p-6 bg-card">
                   <h3 className="text-xl font-bold mb-2">{member.name}</h3>
-                  <p className="text-accent font-medium mb-3">{member.role}</p>
-                  <p className="text-muted-foreground">{member.bio}</p>
+                  <p className="text-accent font-medium">{member.role}</p>
                 </Card>
               ))}
             </div>
