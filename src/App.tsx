@@ -10,6 +10,9 @@ import News from "./pages/News";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Toolkit from "./pages/Toolkit";
+import ProtectYourself from "./pages/ProtectYourself";
+import Resources from "./pages/Resources";
+import LegalContext from "./pages/LegalContext";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +27,9 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/toolkit" element={<Toolkit />} />
+          <Route path="/protect" element={<ProtectYourself />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/legal" element={<LegalContext />} />
           <Route path="/news" element={<News />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
