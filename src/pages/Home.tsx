@@ -47,7 +47,7 @@ const Home = () => {
           </Link>
 
           {/* Protect Yourself */}
-          <Link to="/toolkit" className="block mb-8">
+          <Link to="/protect" className="block mb-8">
             <Card className="p-6 md:p-8 hover:shadow-lg transition-all group border-2 border-border hover:border-primary/30">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
@@ -64,7 +64,7 @@ const Home = () => {
 
           {/* Three info cards */}
           <div className="grid md:grid-cols-3 gap-4 mb-8">
-            <Link to="/toolkit">
+            <Link to="/resources">
               <Card className="p-6 hover:shadow-lg transition-shadow h-full">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
                   <BookOpen className="text-primary" size={20} />
@@ -74,7 +74,7 @@ const Home = () => {
                 <span className="text-primary text-sm font-medium flex items-center gap-1">Browse <ArrowRight size={14} /></span>
               </Card>
             </Link>
-            <Link to="/toolkit">
+            <Link to="/legal">
               <Card className="p-6 hover:shadow-lg transition-shadow h-full">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
                   <Scale className="text-primary" size={20} />
