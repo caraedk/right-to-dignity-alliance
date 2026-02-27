@@ -102,11 +102,11 @@ const About = () => {
             </div>
             
             <div className="grid md:grid-cols-3 gap-6">
-              {partners.map((partner, index) =>
-            <Card key={index} className="p-6">
-                  <h3 className="font-bold text-lg mb-2">{partner.name}</h3>
-                  <p className="text-sm text-muted-foreground">{partner.type}</p>
-                </Card>
+              {partners.map((partner, index) => {}
+
+
+
+
             )}
             </div>
           </div>
