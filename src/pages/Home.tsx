@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Shield, Users, Scale } from "lucide-react";
+import { ArrowRight, Shield, Users, Scale, FileText, BookOpen, ChevronRight, Heart, HandHelping } from "lucide-react";
 import { Link } from "react-router-dom";
 const Home = () => {
   return <div className="min-h-screen">
@@ -27,15 +27,111 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Toolkit Section */}
+      <section className="py-12 bg-background">
+        <div className="container mx-auto px-4 max-w-5xl">
+          {/* Get Help Now - primary CTA */}
+          <Link to="/toolkit" className="block mb-4">
+            <Card className="p-6 md:p-8 bg-primary text-primary-foreground hover:bg-primary/95 transition-colors group">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary-foreground/20 flex items-center justify-center shrink-0">
+                  <ArrowRight className="text-primary-foreground" size={24} />
+                </div>
+                <div className="flex-1">
+                  <h2 className="text-xl md:text-2xl font-bold">Get help now</h2>
+                  <p className="opacity-90 text-sm md:text-base">Step-by-step guidance for responding to non-consensual content</p>
+                </div>
+                <ChevronRight className="opacity-70 group-hover:translate-x-1 transition-transform hidden sm:block" size={24} />
+              </div>
+            </Card>
+          </Link>
+
+          {/* Protect Yourself */}
+          <Link to="/toolkit" className="block mb-8">
+            <Card className="p-6 md:p-8 hover:shadow-lg transition-all group border-2 border-border hover:border-primary/30">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <Shield className="text-primary" size={24} />
+                </div>
+                <div className="flex-1">
+                  <h2 className="text-xl font-bold text-foreground">Protect yourself</h2>
+                  <p className="text-muted-foreground text-sm">Proactive steps to protect your privacy and reduce risk</p>
+                </div>
+                <ArrowRight className="text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all hidden sm:block" size={20} />
+              </div>
+            </Card>
+          </Link>
+
+          {/* Three info cards */}
+          <div className="grid md:grid-cols-3 gap-4 mb-8">
+            <Link to="/toolkit">
+              <Card className="p-6 hover:shadow-lg transition-shadow h-full">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+                  <BookOpen className="text-primary" size={20} />
+                </div>
+                <h3 className="font-bold text-foreground mb-1">Resources</h3>
+                <p className="text-sm text-muted-foreground mb-3">Organisations, helplines, and tools across Europe</p>
+                <span className="text-primary text-sm font-medium flex items-center gap-1">Browse <ArrowRight size={14} /></span>
+              </Card>
+            </Link>
+            <Link to="/toolkit">
+              <Card className="p-6 hover:shadow-lg transition-shadow h-full">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+                  <Scale className="text-primary" size={20} />
+                </div>
+                <h3 className="font-bold text-foreground mb-1">Legal context</h3>
+                <p className="text-sm text-muted-foreground mb-3">Understanding your rights in plain language</p>
+                <span className="text-primary text-sm font-medium flex items-center gap-1">Learn more <ArrowRight size={14} /></span>
+              </Card>
+            </Link>
+            <Link to="/about">
+              <Card className="p-6 hover:shadow-lg transition-shadow h-full">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+                  <Users className="text-primary" size={20} />
+                </div>
+                <h3 className="font-bold text-foreground mb-1">About us</h3>
+                <p className="text-sm text-muted-foreground mb-3">Who we are and why this toolkit exists</p>
+                <span className="text-primary text-sm font-medium flex items-center gap-1">Read more <ArrowRight size={14} /></span>
+              </Card>
+            </Link>
+          </div>
+
+          {/* Disclaimers */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center py-6 border-t border-border">
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <FileText className="text-primary" size={18} />
+              </div>
+              <p className="font-semibold text-foreground text-sm">Not a helpline</p>
+              <p className="text-xs text-muted-foreground">We connect you to trusted services but don't provide direct support</p>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <Scale className="text-primary" size={18} />
+              </div>
+              <p className="font-semibold text-foreground text-sm">Not legal advice</p>
+              <p className="text-xs text-muted-foreground">We explain your rights in plain language, but we're not lawyers</p>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <BookOpen className="text-primary" size={18} />
+              </div>
+              <p className="font-semibold text-foreground text-sm">A practical guide</p>
+              <p className="text-xs text-muted-foreground">Clear steps, trusted partners, and realistic expectations</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Mission Statement */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
               Our Mission
             </h2>
-            <div className="bg-secondary p-8 md:p-12 rounded-lg">
-              <p className="text-lg md:text-xl text-secondary-foreground leading-relaxed">
+            <div className="bg-card p-8 md:p-12 rounded-lg">
+              <p className="text-lg md:text-xl text-card-foreground leading-relaxed">
                 The Right to Dignity Alliance is committed to establishing comprehensive
                 legal protections against nonconsensual deepfakes and synthetic media.
                 We believe that everyone deserves to control their digital identity and
