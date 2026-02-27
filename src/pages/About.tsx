@@ -100,14 +100,14 @@ const About = () => {
               <Building2 className="text-primary" size={32} />
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">Our Partners</h2>
             </div>
-            
+            <p className="text-lg text-muted-foreground mb-8 max-w-3xl">(....)</p>
             <div className="grid md:grid-cols-3 gap-6">
-              {partners.map((partner, index) => {}
-
-
-
-
-            )}
+              {partners.map((partner, index) => (
+                <Card key={index} className="p-6">
+                  <h3 className="font-bold text-lg mb-2">{partner.name}</h3>
+                  <p className="text-sm text-muted-foreground">{partner.type}</p>
+                </Card>
+              ))}
             </div>
           </div>
         </div>

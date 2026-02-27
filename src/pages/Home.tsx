@@ -20,7 +20,7 @@ const Home = () => {
                 <Link to="/about">Learn More <ArrowRight className="ml-2" size={20} /></Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold">
-                <Link to="/contact" className="text-primary">Get Involved</Link>
+                <Link to="/contact">Get Involved</Link>
               </Button>
             </div>
           </div>
@@ -47,7 +47,7 @@ const Home = () => {
           </Link>
 
           {/* Protect Yourself */}
-          <Link to="/toolkit" className="block mb-8">
+          <Link to="/protect" className="block mb-8">
             <Card className="p-6 md:p-8 hover:shadow-lg transition-all group border-2 border-border hover:border-primary/30">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
@@ -64,7 +64,7 @@ const Home = () => {
 
           {/* Three info cards */}
           <div className="grid md:grid-cols-3 gap-4 mb-8">
-            <Link to="/toolkit">
+            <Link to="/resources">
               <Card className="p-6 hover:shadow-lg transition-shadow h-full">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
                   <BookOpen className="text-primary" size={20} />
@@ -74,7 +74,7 @@ const Home = () => {
                 <span className="text-primary text-sm font-medium flex items-center gap-1">Browse <ArrowRight size={14} /></span>
               </Card>
             </Link>
-            <Link to="/toolkit">
+            <Link to="/legal">
               <Card className="p-6 hover:shadow-lg transition-shadow h-full">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
                   <Scale className="text-primary" size={20} />
@@ -97,29 +97,29 @@ const Home = () => {
           </div>
 
           {/* Disclaimers */}
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center py-6 border-t border-border">
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <FileText className="text-primary" size={18} />
+              </div>
+              <p className="font-semibold text-foreground text-sm">Not a helpline</p>
+              <p className="text-xs text-muted-foreground">We connect you to trusted services but don't provide direct support</p>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <Scale className="text-primary" size={18} />
+              </div>
+              <p className="font-semibold text-foreground text-sm">Not legal advice</p>
+              <p className="text-xs text-muted-foreground">We explain your rights in plain language, but we're not lawyers</p>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <BookOpen className="text-primary" size={18} />
+              </div>
+              <p className="font-semibold text-foreground text-sm">A practical guide</p>
+              <p className="text-xs text-muted-foreground">Clear steps, trusted partners, and realistic expectations</p>
+            </div>
+          </div>
         </div>
       </section>
 
