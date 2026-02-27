@@ -20,7 +20,7 @@ const Home = () => {
                 <Link to="/about">Learn More <ArrowRight className="ml-2" size={20} /></Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold">
-                <Link to="/contact">Get Involved</Link>
+                <Link to="/contact" className="text-primary">Get Involved</Link>
               </Button>
             </div>
           </div>
