@@ -1,17 +1,8 @@
 import { Card } from "@/components/ui/card";
-import { Users, Building2, HandHelping, Heart, UserPlus } from "lucide-react";
-
-const teamMembers = [
-  { name: "Cecilia Liu", role: "Team Lead" },
-  { name: "Zinab Zinad", role: "Policy Research Lead" },
-  { name: "Cara Doumbe Kingue", role: "Partnerships & Outreach Lead" },
-  { name: "Ninive Aguilar", role: "Communications Lead" },
-  { name: "Tina Wong", role: "Operations Lead" },
-];
+import { Building2, HandHelping, Heart, UserPlus, ExternalLink } from "lucide-react";
 
 const partners = [
-  { name: "Alpbach IDEAS", type: "Think Tank & Policy Forum" },
-  { name: "Club Alpbach France", type: "Policy Network" },
+  { name: "Alpbach IDEAS", url: "https://www.alpbach.org/blog/alpbach-ideas" },
 ];
 
 const About = () => {
@@ -33,17 +24,17 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 mb-16">
-              <Card className="p-8 bg-secondary">
-                <h2 className="text-2xl font-bold mb-4 text-secondary-foreground">Our Vision</h2>
-                <p className="text-secondary-foreground/90 leading-relaxed">
+              <Card className="p-8 bg-primary text-primary-foreground">
+                <h2 className="text-2xl font-bold mb-4">Our Vision</h2>
+                <p className="opacity-90 leading-relaxed">
                   A digital Europe where every individual's right to dignity is protected
                   by law, where nonconsensual deepfakes are swiftly addressed, and where
                   platforms are held to the highest standards of accountability.
                 </p>
               </Card>
-              <Card className="p-8 bg-accent">
-                <h2 className="text-2xl font-bold mb-4 text-accent-foreground">Our Approach</h2>
-                <p className="text-accent-foreground/90 leading-relaxed">
+              <Card className="p-8 bg-muted">
+                <h2 className="text-2xl font-bold mb-4 text-foreground">Our Approach</h2>
+                <p className="text-muted-foreground leading-relaxed">
                   We combine legal expertise, policy advocacy, research, and grassroots
                   organizing to create lasting change. We work with victims, policymakers,
                   and technology platforms to build comprehensive solutions.
@@ -54,28 +45,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="flex items-center gap-3 mb-12">
-              <Users className="text-primary" size={32} />
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">Our Team</h2>
-            </div>
-            <div className="grid md:grid-cols-2 gap-6">
-              {teamMembers.map((member, index) => (
-                <Card key={index} className="p-6 bg-card">
-                  <h3 className="text-xl font-bold mb-2">{member.name}</h3>
-                  <p className="text-accent font-medium">{member.role}</p>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Partners Section */}
-      <section className="py-16">
+      <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center gap-3 mb-12">
@@ -85,8 +56,15 @@ const About = () => {
             <div className="grid md:grid-cols-2 gap-6">
               {partners.map((partner, index) => (
                 <Card key={index} className="p-6">
-                  <h3 className="font-bold text-lg mb-2">{partner.name}</h3>
-                  <p className="text-sm text-muted-foreground">{partner.type}</p>
+                  <a
+                    href={partner.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 font-bold text-lg text-primary hover:underline"
+                  >
+                    {partner.name}
+                    <ExternalLink size={16} />
+                  </a>
                 </Card>
               ))}
             </div>

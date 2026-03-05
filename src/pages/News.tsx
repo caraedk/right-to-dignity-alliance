@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Calendar } from "lucide-react";
+import { Calendar, Instagram, Linkedin, Facebook } from "lucide-react";
 
 const newsItems = [
   {
@@ -80,21 +80,40 @@ const News = () => {
         </div>
       </section>
 
-      {/* Newsletter Section */}
+      {/* Stay Updated Section */}
       <section className="py-16 bg-accent">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4 text-accent-foreground">Stay Updated</h2>
-            <p className="text-lg mb-6 text-accent-foreground/90">
-              Subscribe to our newsletter to receive the latest news and updates on our
-              advocacy efforts directly in your inbox.
-            </p>
-            <a 
-              href="/contact"
-              className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
-            >
-              Subscribe Now
-            </a>
+            <h2 className="text-3xl font-bold mb-6 text-accent-foreground">Stay Updated</h2>
+            <div className="flex justify-center space-x-6">
+              <a
+                href="https://www.instagram.com/righttodignity"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent-foreground hover:text-primary transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram size={32} />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/right-to-dignity-alliance"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent-foreground hover:text-primary transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={32} />
+              </a>
+              <a
+                href="https://www.facebook.com/righttodignityalliance"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent-foreground hover:text-primary transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook size={32} />
+              </a>
+            </div>
           </div>
         </div>
       </section>

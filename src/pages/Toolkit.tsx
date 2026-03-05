@@ -205,7 +205,7 @@ const Toolkit = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero */}
-      <section className="bg-primary text-primary-foreground py-12 md:py-20">
+      <section className="bg-primary text-primary-foreground py-8 md:py-12">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">Action Toolkit</h1>
           <p className="text-lg md:text-xl opacity-90 max-w-3xl">
