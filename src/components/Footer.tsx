@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Linkedin, Mail } from "lucide-react";
+import { Instagram, Facebook, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -17,9 +17,10 @@ const Footer = () => {
             <h4 className="font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li><a href="/" className="hover:text-accent transition-colors">Home</a></li>
-              <li><a href="/news" className="hover:text-accent transition-colors">News</a></li>
+              <li><a href="/resources" className="hover:text-accent transition-colors">Resources</a></li>
+              <li><a href="/manifesto" className="hover:text-accent transition-colors">Manifesto</a></li>
+              <li><a href="/legal" className="hover:text-accent transition-colors">Legal Context</a></li>
               <li><a href="/about" className="hover:text-accent transition-colors">About</a></li>
-              <li><a href="/contact" className="hover:text-accent transition-colors">Contact</a></li>
             </ul>
           </div>
           
@@ -52,13 +53,6 @@ const Footer = () => {
                 aria-label="Facebook"
               >
                 <Facebook size={24} />
-              </a>
-              <a
-                href="mailto:righttodignityalliance@gmail.com"
-                className="hover:text-accent transition-colors"
-                aria-label="Email"
-              >
-                <Mail size={24} />
               </a>
             </div>
           </div>

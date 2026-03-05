@@ -1,17 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Shield, Users, Scale, FileText, BookOpen, ChevronRight, Heart, HandHelping } from "lucide-react";
+import { ArrowRight, Shield, Users, Scale, FileText, BookOpen, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
+
 const Home = () => {
-  return <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-20 md:py-32">
+  return (
+    <div className="min-h-screen">
+      {/* Hero Section - shorter */}
+      <section className="bg-primary text-primary-foreground py-12 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
               Fighting for Your Right to Dignity in the Digital Age
             </h1>
-            <p className="text-xl md:text-2xl mb-8 opacity-90">
+            <p className="text-lg md:text-xl mb-6 opacity-90">
               We're advocating for a legally binding EU right to dignity, ensuring
               nonconsensual deepfakes are swiftly removed and platforms are held accountable.
             </p>
@@ -19,8 +21,8 @@ const Home = () => {
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
                 <Link to="/about">Learn More <ArrowRight className="ml-2" size={20} /></Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold">
-                <Link to="/contact">Get Involved</Link>
+              <Button asChild size="lg" variant="outline" className="border-primary-foreground text-foreground bg-primary-foreground hover:bg-primary-foreground/90 font-semibold">
+                <Link to="/about#get-involved">Get Involved</Link>
               </Button>
             </div>
           </div>
@@ -30,7 +32,6 @@ const Home = () => {
       {/* Toolkit Section */}
       <section className="py-12 bg-background">
         <div className="container mx-auto px-4 max-w-5xl">
-          {/* Get Help Now - primary CTA */}
           <Link to="/toolkit" className="block mb-4">
             <Card className="p-6 md:p-8 bg-primary text-primary-foreground hover:bg-primary/95 transition-colors group">
               <div className="flex items-center gap-4">
@@ -46,7 +47,6 @@ const Home = () => {
             </Card>
           </Link>
 
-          {/* Protect Yourself */}
           <Link to="/protect" className="block mb-8">
             <Card className="p-6 md:p-8 hover:shadow-lg transition-all group border-2 border-border hover:border-primary/30">
               <div className="flex items-center gap-4">
@@ -62,8 +62,8 @@ const Home = () => {
             </Card>
           </Link>
 
-          {/* Three info cards */}
-          <div className="grid md:grid-cols-3 gap-4 mb-8">
+          {/* Four info cards */}
+          <div className="grid md:grid-cols-4 gap-4 mb-8">
             <Link to="/resources">
               <Card className="p-6 hover:shadow-lg transition-shadow h-full">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
@@ -82,6 +82,16 @@ const Home = () => {
                 <h3 className="font-bold text-foreground mb-1">Legal context</h3>
                 <p className="text-sm text-muted-foreground mb-3">Understanding your rights in plain language</p>
                 <span className="text-primary text-sm font-medium flex items-center gap-1">Learn more <ArrowRight size={14} /></span>
+              </Card>
+            </Link>
+            <Link to="/manifesto">
+              <Card className="p-6 hover:shadow-lg transition-shadow h-full">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+                  <FileText className="text-primary" size={20} />
+                </div>
+                <h3 className="font-bold text-foreground mb-1">Our Manifesto</h3>
+                <p className="text-sm text-muted-foreground mb-3">Key ideas and policy research for digital dignity</p>
+                <span className="text-primary text-sm font-medium flex items-center gap-1">Read more <ArrowRight size={14} /></span>
               </Card>
             </Link>
             <Link to="/about">
@@ -156,7 +166,6 @@ const Home = () => {
               <h3 className="text-xl font-bold mb-3">Legal Advocacy</h3>
               <p className="text-muted-foreground">Working with EU policymakers to establish a legally binding right to dignity that protects individuals from nonconsensual deepfakes.</p>
             </Card>
-
             <Card className="p-6 bg-card hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mb-4">
                 <Users className="text-secondary-foreground" size={24} />
@@ -167,7 +176,6 @@ const Home = () => {
                 remove nonconsensual deepfakes and synthetic media.
               </p>
             </Card>
-
             <Card className="p-6 bg-card hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-4">
                 <Scale className="text-accent-foreground" size={24} />
@@ -193,10 +201,12 @@ const Home = () => {
             and protects individuals from harm.
           </p>
           <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
-            <Link to="/contact">Contact Us <ArrowRight className="ml-2" size={20} /></Link>
+            <a href="mailto:righttodignityalliance@gmail.com">Contact Us via Email <ArrowRight className="ml-2" size={20} /></a>
           </Button>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default Home;

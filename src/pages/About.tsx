@@ -1,42 +1,22 @@
 import { Card } from "@/components/ui/card";
-import { Users, Building2 } from "lucide-react";
-const teamMembers = [{
-  name: "Cecilia Liu",
-  role: "Team Lead"
-}, {
-  name: "Zinab Zinad",
-  role: "Policy Research Lead"
-}, {
-  name: "Cara Doumbe Kingue",
-  role: "Partnerships & Outreach Lead"
-}, {
-  name: "Ninive Aguilar",
-  role: "Communications Lead"
-}, {
-  name: "Tina Wong",
-  role: "Operations Lead"
-}];
-const partners = [{
-  name: "European Digital Rights Initiative",
-  type: "Advocacy Organization"
-}, {
-  name: "Tech Accountability Network",
-  type: "Platform Watchdog"
-}, {
-  name: "Women's Digital Safety Coalition",
-  type: "Victim Support"
-}, {
-  name: "Centre for AI Ethics",
-  type: "Research Institution"
-}, {
-  name: "EU Privacy Rights Foundation",
-  type: "Legal Advocacy"
-}, {
-  name: "Digital Identity Protection League",
-  type: "Civil Society Organization"
-}];
+import { Users, Building2, HandHelping, Heart, UserPlus } from "lucide-react";
+
+const teamMembers = [
+  { name: "Cecilia Liu", role: "Team Lead" },
+  { name: "Zinab Zinad", role: "Policy Research Lead" },
+  { name: "Cara Doumbe Kingue", role: "Partnerships & Outreach Lead" },
+  { name: "Ninive Aguilar", role: "Communications Lead" },
+  { name: "Tina Wong", role: "Operations Lead" },
+];
+
+const partners = [
+  { name: "Alpbach IDEAS", type: "Think Tank & Policy Forum" },
+  { name: "Club Alpbach France", type: "Policy Network" },
+];
+
 const About = () => {
-  return <div className="min-h-screen bg-background">
+  return (
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="bg-primary text-primary-foreground py-16 md:py-24">
         <div className="container mx-auto px-4">
@@ -83,10 +63,12 @@ const About = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">Our Team</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
-              {teamMembers.map((member, index) => <Card key={index} className="p-6 bg-card">
+              {teamMembers.map((member, index) => (
+                <Card key={index} className="p-6 bg-card">
                   <h3 className="text-xl font-bold mb-2">{member.name}</h3>
                   <p className="text-accent font-medium">{member.role}</p>
-                </Card>)}
+                </Card>
+              ))}
             </div>
           </div>
         </div>
@@ -100,8 +82,7 @@ const About = () => {
               <Building2 className="text-primary" size={32} />
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">Our Partners</h2>
             </div>
-            <p className="text-lg text-muted-foreground mb-8 max-w-3xl">(....)</p>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
               {partners.map((partner, index) => (
                 <Card key={index} className="p-6">
                   <h3 className="font-bold text-lg mb-2">{partner.name}</h3>
@@ -113,21 +94,62 @@ const About = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-16 bg-secondary">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4 text-secondary-foreground">
-            Want to Partner With Us?
-          </h2>
-          <p className="text-lg mb-6 text-secondary-foreground/90 max-w-2xl mx-auto">
-            We're always looking to expand our network of partners committed to
-            protecting digital dignity. Get in touch to explore collaboration opportunities.
-          </p>
-          <a href="/contact" className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
-            Contact Us
-          </a>
+      {/* Get Involved Section */}
+      <section id="get-involved" className="py-16 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-secondary-foreground text-center">
+              Get Involved
+            </h2>
+            <p className="text-lg text-secondary-foreground/90 text-center max-w-3xl mx-auto mb-12">
+              There are many ways to support our mission. Whether you're an individual, organization, or platform interested in protecting digital dignity, we want to hear from you.
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <Card className="p-8 bg-card text-center">
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <UserPlus className="text-primary" size={28} />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Volunteer</h3>
+                <p className="text-muted-foreground text-sm">
+                  Join our team of dedicated volunteers working on advocacy and outreach.
+                </p>
+              </Card>
+
+              <Card className="p-8 bg-card text-center">
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <HandHelping className="text-primary" size={28} />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Partner</h3>
+                <p className="text-muted-foreground text-sm">
+                  Explore partnership opportunities to amplify our collective impact.
+                </p>
+              </Card>
+
+              <Card className="p-8 bg-card text-center">
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-primary" size={28} />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Support</h3>
+                <p className="text-muted-foreground text-sm">
+                  Help fund our advocacy work and support victims of deepfake abuse.
+                </p>
+              </Card>
+            </div>
+
+            <div className="text-center">
+              <a
+                href="mailto:righttodignityalliance@gmail.com"
+                className="inline-block bg-accent text-accent-foreground px-8 py-3 rounded-lg font-semibold hover:bg-accent/90 transition-colors"
+              >
+                Contact Us via Email
+              </a>
+            </div>
+          </div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default About;

@@ -10,7 +10,6 @@ const Navigation = () => {
     { to: "/toolkit", label: "Toolkit" },
     { to: "/news", label: "News" },
     { to: "/about", label: "About" },
-    { to: "/contact", label: "Contact" },
   ];
 
   return (
@@ -21,7 +20,6 @@ const Navigation = () => {
             Right to Dignity Alliance
           </NavLink>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
               <NavLink
@@ -39,7 +37,6 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden"
             onClick={() => setIsOpen(!isOpen)}
@@ -49,7 +46,6 @@ const Navigation = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden mt-4 pb-4 space-y-4">
             {navLinks.map((link) => (

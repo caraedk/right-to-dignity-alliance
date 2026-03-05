@@ -8,11 +8,11 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import News from "./pages/News";
 import About from "./pages/About";
-import Contact from "./pages/Contact";
 import Toolkit from "./pages/Toolkit";
 import ProtectYourself from "./pages/ProtectYourself";
 import Resources from "./pages/Resources";
 import LegalContext from "./pages/LegalContext";
+import Manifesto from "./pages/Manifesto";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,10 +30,9 @@ const App = () => (
           <Route path="/protect" element={<ProtectYourself />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/legal" element={<LegalContext />} />
+          <Route path="/manifesto" element={<Manifesto />} />
           <Route path="/news" element={<News />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
